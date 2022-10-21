@@ -7,12 +7,22 @@
     */
 
     //ENTRADA
-
+    const qntAlunos = Number(prompt(`Quantos alunos você possui?`));
+    let girls = [];
+    let boys = [];
 
     //PROCESSAMENTO
-
+    for (let contador = 1; contador <= qntAlunos; contador++){
+        let nome = prompt(`Qual o nome do aluno ${contador}?`).toUpperCase();
+        let genero = prompt (`Qual o gênero do aluno ${contador}? (F- feminino | M-masculino`).toUpperCase();
+        if (genero === "F") {
+            girls.push(nome);
+        } else {
+            boys.push(nome);
+        }
+    }
 
     //SAÍDA
-
+    document.write(`A lista de meninas é ${girls.sort().join(", ")} e a de meninos é ${boys.sort().join(", ")}`)
     
 </script>

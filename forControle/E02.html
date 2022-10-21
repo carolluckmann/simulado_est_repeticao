@@ -12,12 +12,20 @@
     */
 
     //ENTRADA
-
+    const quantidadeAbasteceu = Number(prompt(`Quantas vezes você abasteceu?`));
+    const distancia = Number(prompt(`Qual a distância total percorrida (em km)?`));
+    let custoTotal = 0;
+    let custoAbastecimento = 0;
 
     //PROCESSAMENTO
-
+    for (contador = 1; contador <= quantidadeAbasteceu; contador++){
+        custoAbastecimento = Number(prompt(`Qual o valor do abastecimento ${contador}?`));
+        custoTotal += custoAbastecimento;
+    }
+    
+    const custoKM = distancia / custoTotal;
 
     //SAÍDA
-
+    document.write(`O custo do km é R$${custoKM.toFixed(2)}. </br> O custo total é R$${custoTotal.toFixed(2)}. </br> A quilometragem total é ${distancia}.`);
 
 </script>

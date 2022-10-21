@@ -8,12 +8,16 @@
     */
 
     //ENTRADA
-
-
+    let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
+    let media = 0
     //PROCESSAMENTO
-
-
+    for(let precos of precoKgArroz){
+        media += precos;
+    }
+    media = media/(precoKgArroz.length);
     //SAÍDA
+    document.write(`A média dos preços é R$${media.toFixed(2)}. O preço mais alto é R$${precoKgArroz.sort((a, b) => b - a)[0].toFixed(2)}. O preço mais baixo é R$${precoKgArroz.sort((a, b) => a-b)[0].toFixed(2)}.`)
 
+    //Demorei a entender que precisava inverter os valores (tinha que ser b-a para retornar o valor maior)... tentei até reverse, n entendo mto bem como usar isso.
 
 </script>

@@ -8,12 +8,19 @@
     */
 
     //ENTRADA
-
-
+    let nomePessoas = ["Eduardo da Silva", "Eduardo Montandon", "Lucas Eduardo", "José da Silva", "Rafael Gonçalves"];
+    let Silva = [];
+    let outros = [];
     //PROCESSAMENTO
-
+    for (nome of nomePessoas) {
+        if (nome.search("Silva") >= 0){
+            Silva.push(nome);
+        } else {
+            outros.push(nome);
+        }
+    }   
 
     //SAÍDA
-
+    document.write(`Nomes com Silva: ${Silva.sort().join(", ")}. A família Silva tem ${Silva.length} descendentes.`)
 
 </script>
